@@ -1,0 +1,19 @@
+<h3>There are {{words}} words in your text</h3>
+
+<h4>The text you have entered is :  {{fulltext}}</h4>
+
+<form action="{% url 'home' %}">
+  <input type="submit" value="Start Again">
+</form>
+
+<h2>word count : </h2>
+
+{{word_list}}
+
+<br>
+
+{% for word, count in word_list %}
+
+{{word}} -- {{count}}
+<br>
+{% endfor %}
